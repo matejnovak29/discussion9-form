@@ -1,0 +1,72 @@
+  /* Create an accessible color palette using var()function */
+  /* https://www.w3schools.com/css/css3_variables.asp */
+  :root {
+    --sandy: #ccc;
+    --orangy: #ffc895; 
+    --darkblue: #054fb9;
+    --lightblue: #0073e6;
+    --white: #fff;
+  }
+  
+  form {
+    font-family: "Trirong", serif;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid var(--sandy);
+    border-radius: 16px;
+    width:70%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--darkblue);
+    font-size: 20px;
+    background: var(--orangy);
+  }
+
+  .radio {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #name {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--darkblue);
+  }
+
+  #message {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+  }
+
+  .radio > label, input {
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: top;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--lightblue);
+  }
+
+  #skip-to-main {
+    position: absolute;
+    left: -999px;
+  }
+
+  #skip-to-main:focus {
+    left: 1%;
+  }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add fonts from Adobe fonts or Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <title>Submit Recommendations</title>
+     <!-- Add a favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Implement a skip to main! -->
+    <a href="#name" id="skip-to-main">Skip to main</a>
+    <form action="https://formspree.io/f/xvoeqdyo" method="post">
+        <p>Connect to formspree.io</p>
+        <label for="name" id="namelabel">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <div class="radio">
+          <label>Area of Submission:</label><br>
+              <!-- How can the label and button line up and be easily navigatable? -->
+          <input type="radio" id="travel" name="interest" value="travel" required>
+          <label for="travel">Travel</label><br>
+          <input type="radio" id="recipe" name="interest" value="recipe">
+          <label for="recipe">Recipe</label><br>
+          <input type="radio" id="pets" name="interest" value="pets">
+          <label for="pets">Pets</label><br><br>
+        </div>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" tabindex="0"></textarea><br><br>
+
+        <label for="image">Upload Image:</label><br>
+        <input type="file" id="image" name="image" tabindex="0"><br><br>
+
+        <input type="submit" value="Submit" tabindex="0">
+
+        <button type="reset" tabindex="0">Reset</button>
+      </form>
+</body>
+</html>
